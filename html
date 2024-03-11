@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comanda de...</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Comanda de...</h1>
+  <form action="procesare.php" method="post">
+    <label for="nume">Numele Dvs.:</label>
+    <input type="text" id="nume" name="nume" required>
+    <br>
+    <label for="telefon">Numarul Dvs.:</label>
+    <input type="tel" id="telefon" name="telefon" required>
+    <br>
+    <br>
+    <h2>Alegeti produsul:</h2>
+    <select name="produs" id="produs" required>
+      <option value="">--- Alegeti produsul ---</option>
+      <option value="pizza">Pizza</option>
+      <option value="burger">Burger</option>
+      <option value="paste">Paste</option>
+      <option value="salata">Salata</option>
+    </select>
+    <br>
+    <br>
+    <div id="optiuni-pizza" style="display: none;">
+      <h3>Tipul de pizza:</h3>
+      <input type="radio" id="peperoni" name="tip_pizza" value="peperoni" checked>
+      <label for="peperoni">Peperoni</label>
+      <br>
+      <input type="radio" id="vegetarian" name="tip_pizza" value="vegetarian">
+      <label for="vegetarian">Vegetarian</label>
+      <br>
+      <input type="radio" id="rancho" name="tip_pizza" value="rancho">
+      <label for="rancho">Rancho</label>
+      <br>
+      <br>
+      <h3>Sos pentru pizza:</h3>
+      <select name="sos_pizza" id="sos_pizza">
+        <option value="">--- Alegeti sosul ---</option>
+        <option value="secret">Secret Sauce</option>
+        <option value="picant">Sos picant</option>
+        <option value="pesto">Sos pesto</option>
+      </select>
+      <br>
+      <br>
+      <h3>Adaosuri:</h3>
+      <input type="checkbox" id="extra_cheese" name="adaosuri[]" value="extra_cheese">
+      <label for="extra_cheese">Extra Cheese</label>
+      <br>
+      <input type="checkbox" id="gluten_free" name="adaosuri[]" value="gluten_free">
+      <label for="gluten_free">Baza fara gluten</label>
+      <br>
+    </div>
+    <br>
+    <label for="instructiuni">Instructiuni pentru livrare:</label>
+    <br>
+    <textarea id="instructiuni" name="instructiuni" rows="4" cols="50"></textarea>
+    <br>
+    <br>
+    <button type="submit">Trimite comanda</button>
+  </form>
+</body>
+</html>
